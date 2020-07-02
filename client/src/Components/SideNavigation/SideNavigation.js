@@ -10,7 +10,7 @@ const SideNavigation = ({ handleNavOpened }) => {
 		<Fragment>
 			<div className="sideNavigationContainer">
 				<User />
-				<Menu />
+				<Menu handleNavOpened={handleNavOpened} />
 
 				<div className="sideNavigationBottom">
 					<NotificationsSwitch />
