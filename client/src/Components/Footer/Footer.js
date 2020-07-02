@@ -1,8 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {
 	ShoppingCartOutlined,
 	HistoryOutlined,
-	MoneyCollectOutlined
+	MoneyCollectOutlined,
+	HomeOutlined
 } from '@ant-design/icons'
 import './Footer.css'
 
@@ -10,12 +12,23 @@ const Footer = () => {
 	return (
 		<footer className="footer">
 			<ul>
-				<li>
-					<ShoppingCartOutlined
-						style={{ display: 'block', fontSize: 24 }}
-					/>
-					Cart
-				</li>
+				<Link to="/">
+					<li>
+						<HomeOutlined
+							style={{ display: 'block', fontSize: 24 }}
+						/>
+						Home
+					</li>
+				</Link>
+
+				<Link to="/cart">
+					<li>
+						<ShoppingCartOutlined
+							style={{ display: 'block', fontSize: 24 }}
+						/>
+						Cart
+					</li>
+				</Link>
 
 				<li>
 					<HistoryOutlined

@@ -1,6 +1,7 @@
 import React from 'react'
 import { MenuOutlined, WalletTwoTone } from '@ant-design/icons'
 import { Row, Col } from 'antd'
+import SideNavigation from '../SideNavigation/SideNavigation'
 import './Header.css'
 
 const Header = () => {
@@ -23,6 +24,8 @@ const Header = () => {
 					<WalletTwoTone style={{ fontSize: 32 }} />
 				</Col>
 			</Row>
+
+			<SideNavigation />
 		</header>
 	)
 }
