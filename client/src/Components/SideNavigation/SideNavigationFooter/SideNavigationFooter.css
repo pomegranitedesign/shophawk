@@ -1,0 +1,9 @@
+.sideNavigationFooterContainer {
+	text-align: center;
+	margin-top: 40px;
+}
+
+.sideNavigationFooterContainer a {
+	color: #000000;
+	font-size: 20px;
+}
