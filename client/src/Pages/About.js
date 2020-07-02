@@ -104,7 +104,7 @@ class About extends React.Component {
 						/>
 					</h2>
 
-					<h3 style={versionStyle}>Version: 1.0</h3>
+					<h3 style={versionStyle}></h3>
 
 					<h3 style={contentStyle}> 
 						ShopHawk is a general purpose contactless payment method specifically tailored for smaller businesses. ShopHawk offers many features such as being all-in-one digital receipt keeper allowing customers as well as businesses keep track of their finances (budgeting and accounting) with ease.
