@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import {
 	ShoppingCartOutlined,
 	HistoryOutlined,
@@ -12,36 +12,40 @@ const Footer = () => {
 	return (
 		<footer className="footer">
 			<ul>
-				<Link to="/">
-					<li>
+				<li>
+					<NavLink activeClassName="footerLinkActive" to="/">
 						<HomeOutlined
 							style={{ display: 'block', fontSize: 24 }}
 						/>
 						Home
-					</li>
-				</Link>
+					</NavLink>
+				</li>
 
-				<Link to="/cart">
-					<li>
+				<li>
+					<NavLink activeClassName="footerLinkActive" to="/cart">
 						<ShoppingCartOutlined
 							style={{ display: 'block', fontSize: 24 }}
 						/>
 						Cart
-					</li>
-				</Link>
-
-				<li>
-					<HistoryOutlined
-						style={{ display: 'block', fontSize: 24 }}
-					/>
-					History
+					</NavLink>
 				</li>
 
 				<li>
-					<MoneyCollectOutlined
-						style={{ display: 'block', fontSize: 24 }}
-					/>
-					Budget
+					<NavLink to="/history">
+						<HistoryOutlined
+							style={{ display: 'block', fontSize: 24 }}
+						/>
+						History
+					</NavLink>
+				</li>
+
+				<li>
+					<NavLink to="/budget">
+						<MoneyCollectOutlined
+							style={{ display: 'block', fontSize: 24 }}
+						/>
+						Budget
+					</NavLink>
 				</li>
 			</ul>
 		</footer>
