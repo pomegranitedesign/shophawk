@@ -1,0 +1,16 @@
+.menuContainer {
+	margin-top: 100px;
+}
+
+.menuContainer a {
+	color: #000000;
+	display: block;
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 32px;
+	cursor: pointer;
+}
+
+.menuContainer a:hover {
+	color: #2ec4b6;
+}
