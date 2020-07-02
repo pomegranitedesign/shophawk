@@ -5,9 +5,14 @@ import './Layout.css'
 
 const Layout = ({ children }) => {
 	const [ isNavOpened, setNavOpened ] = useState(false)
+	const handleNavOpened = () =>
+		setNavOpened((isNavOpened) => (isNavOpened = !isNavOpened))
 	return (
 		<div className="container">
-			<Header />
+			<Header
+				handleNavOpened={handleNavOpened}
+				isNavOpened={isNavOpened}
+			/>
 			{children}
 			<Footer />
 		</div>
