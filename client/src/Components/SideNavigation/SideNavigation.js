@@ -5,20 +5,20 @@ import NotificationsSwitch from './NotificationsSwitch/NotificationsSwitch'
 import SideNavigationFooter from './SideNavigationFooter/SideNavigationFooter'
 import './SideNavigation.css'
 
-const SideNavigation = ({ handleNavOpened }) => {
+const SideNavigation = ({ setNavOpened }) => {
 	return (
 		<Fragment>
 			<div className="sideNavigationContainer">
 				<User />
-				<Menu handleNavOpened={handleNavOpened} />
+				<Menu setNavOpened={setNavOpened} />
 
 				<div className="sideNavigationBottom">
 					<NotificationsSwitch />
-					<SideNavigationFooter />
+					<SideNavigationFooter setNavOpened={setNavOpened} />
 				</div>
 			</div>
 
-			<div className="overlay" onClick={handleNavOpened} />
+			<div className="overlay" onClick={() => setNavOpened(false)} />
 		</Fragment>
 	)
 }

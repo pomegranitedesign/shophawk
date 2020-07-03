@@ -3,12 +3,23 @@
 *,
 *::before,
 *::after {
-	x: 0 !important;
-	margin: 0 !important;
+	padding: 0;
+	margin: 0;
 	box-sizing: border-box;
+}
+
+body {
+	background-color: #f6f7f8;
 }
 
 html {
 	font-size: 62.5%;
 	font-family: "Roboto", sans-serif;
+}
+
+.myAccountWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }

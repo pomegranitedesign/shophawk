@@ -1,22 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { UserOutlined, SettingOutlined } from '@ant-design/icons'
 import './Menu.css'
 
-const Menu = ({ handleNavOpened }) => {
-	const [ isClicked, setisClicked ] = useState(false)
-	useEffect(
-		() => {
-			if (isClicked) handleNavOpened()
-		},
-		[ handleNavOpened ]
-	)
+const Menu = ({ setNavOpened }) => {
 	return (
 		<div className="menuContainer">
-			<NavLink to="/my-account" onClick={setisClicked(true)}>
+			<NavLink to="/my-account" onClick={() => setNavOpened(false)}>
 				<UserOutlined /> My Account
 			</NavLink>
-			<NavLink to="/settings" onClick={handleNavOpened}>
+			<NavLink to="/settings" onClick={() => setNavOpened(false)}>
 				<SettingOutlined /> Settings
 			</NavLink>
 		</div>

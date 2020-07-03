@@ -4,13 +4,13 @@ import { Row, Col } from 'antd'
 import SideNavigation from '../SideNavigation/SideNavigation'
 import './Header.css'
 
-const Header = ({ isNavOpened, handleNavOpened }) => {
+const Header = ({ isNavOpened, setNavOpened }) => {
 	return (
 		<header className="header">
 			<Row align="middle">
 				<Col span={12}>
 					<MenuOutlined
-						onClick={handleNavOpened}
+						onClick={() => setNavOpened(true)}
 						style={{
 							fontSize: 32,
 							textAlign: 'left',
@@ -26,9 +26,7 @@ const Header = ({ isNavOpened, handleNavOpened }) => {
 				</Col>
 			</Row>
 
-			{isNavOpened && (
-				<SideNavigation handleNavOpened={handleNavOpened} />
-			)}
+			{isNavOpened && <SideNavigation setNavOpened={setNavOpened} />}
 		</header>
 	)
 }
