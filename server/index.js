@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require('cors')
+const data = require('./database.js');
 
 // Basic setup
 const app = express()
@@ -15,4 +16,10 @@ app.get('/api/test', (req, res) => {
 })
 
 // Start the server
-app.listen(PORT, () => console.log(`Server is running on port: ${PORT}`))
+data.initialize().then(function(){
+    app.listen(HTTP_PORT, function(){
+        console.log("app listening on: " + HTTP_PORT)
+    });
+}).catch(function(err){
+    console.log("unable to start server: " + err);
+});
